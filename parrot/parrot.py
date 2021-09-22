@@ -24,7 +24,7 @@ class Parrot():
       save_phrase = input_phrase
       if len(input_phrase) >= max_length:
          max_length += 100 	
-      input_phrase = re.sub('[^a-zA-Z0-9 \?\'\-\/\:\.]', '', input_phrase)
+      input_phrase = re.sub('[[^a-zA-Z0-9 \?\'\-]', '', input_phrase)
       input_phrase = "paraphrase: " + input_phrase
       input_ids = self.tokenizer.encode(input_phrase, return_tensors='pt')
       input_ids = input_ids.to(device)
