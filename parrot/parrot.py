@@ -136,7 +136,7 @@ class Parrot():
             for para_phrase, diversity_score in diversity_scored_phrases.items():
                 para_phrases.append((para_phrase,diversiy_ranker))
             para_phrases.sort(key=lambda x:x[1], reverse=True)
-            return para_phrases[0]
+            return para_phrases
         else:
             return [(save_phrase,0)]
 
